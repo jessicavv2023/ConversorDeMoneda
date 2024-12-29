@@ -44,6 +44,8 @@ public class Main {
         }else {
             double resultado = cantidad * tipoCambio;
             System.out.println(" El monto convertido es: "+ resultado);
+            System.out.println("Tipo de cambio utilizado: " + tipoCambio);
+
         }
         }
 
