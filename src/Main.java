@@ -10,7 +10,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Sea Bienvenido/a al Conversor de Moneda =)\n" +
+        boolean continuar = true;
+        while (continuar){
+        System.out.println("Sea Bienvenido/a al Conversor de Monedas \n" +
                 "\n" +
                 "1) Dólar => Peso argentino\n" +
                 "2) Peso argentino => Dólar\n" +
@@ -48,9 +50,8 @@ public class Main {
 
         }
         }
-
-    }
-
+        }
+}
     private static void guardarHistorialJson() throws IOException, InterruptedException {
         ExchaneRateService exchangeRateService = new ExchaneRateService();
         String historialJson = exchangeRateService.getHistorialJson();
