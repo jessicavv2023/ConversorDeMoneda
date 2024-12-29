@@ -49,6 +49,20 @@ public class ExchaneRateService {
 
         }
     }
+
+    public String getHistorialJson() throws IOException, InterruptedException {
+        // Obtener datos de la API
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(API_URL))
+                .build();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        String json = response.body();
+
+        // Devolver el JSON original (puedes personalizar si es necesario)
+        return json;
+    }
+
 }
 
 
